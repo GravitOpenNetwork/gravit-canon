@@ -1,2 +1,2 @@
-# gravit-canon
-Gravit Canon•Specification Repository • Architecture is stable.
+# Gravit Canon Final
+Architecture is stable.

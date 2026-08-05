@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rfc xmlns:xi="http://www.w3.org/2001/XInclude" category="info" docName="draft-gravit-gevp-05" ipr="trust200902" submissionType="IETF" version="3">
+  <front>
+    <title abbrev="GEVP">Gravit Epistemic Verification Protocol (GEVP)</title>
+    <author fullname="Alex Konviser" initials="A." surname="Konviser"><organization>Gravit Open Network</organization><address><email>ietf@gravit.space</email></address></author>
+    <date day="5" month="August" year="2026"/>
+    <area>Security</area>
+    <workgroup>Individual Submission</workgroup>
+    <keyword>verifiable AI</keyword>
+    <abstract><t>GEVP defines minimal protocol for epistemic convergence. Renamed from VCP to avoid collision with draft-kamimura-scitt-vcp. Invariant C_manip > C_val*2.0 as engineering heuristic. Theta 0.73 RECOMMENDED pinned 7755f53. Architecture stable per https://github.com/GravitOpenNetwork/gravit-canon.</t></abstract>
+  </front>
+  <middle>
+    <section anchor="intro"><name>Introduction</name><t>Gravit open network for verifiable knowledge transformations. Stable. Future is implementations.</t><t>GEVP defines ESM RAW->VALIDATED->VERIFIED->COMMITTED, verification types, persistence MAY Ledger IPFS GSS DB Archive, bindings separate.</t></section>
+    <section anchor="conv"><name>Conventions</name><t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 <xref target="RFC2119"/> <xref target="RFC8174"/> when, and only when, they appear in all capitals, as shown here.</t><t>Invariant C_manip > C_val*2.0 measurement.</t></section>
+    <section anchor="esm"><name>Epistemic State Machine</name><t>States RAW VALIDATED VERIFIED COMMITTED explicit logged.</t></section>
+    <section anchor="types"><name>Protocol Data Types</name><t>Artifact id hash SHA3-256 claim provenance signatures optional. Record artifact-id verifier-id theta 0.73 result timestamp. Convergence h>0.7 f&lt;0.3.</t></section>
+    <section anchor="persist"><name>Persistence</name><t>MAY not MUST. Ledger IPFS GSS DB Archive.</t></section>
+    <section anchor="sec"><name>Security Considerations</name><t>Replay hash nonce. Sybil cost model. No PII. Signatures OPTIONAL.</t></section>
+    <section anchor="priv"><name>Privacy Considerations</name><t>Content MAY encrypted, provenance MAY redacted.</t></section>
+    <section anchor="iana"><name>IANA Considerations</name><t>No IANA actions.</t></section>
+    <section anchor="impl"><name>Implementation Status</name><t>MVR 0.1.0-mvr https://github.com/GravitOpenNetwork/gravit-canon SHA 7755f53 TPR 93.4 FPR 0.4 theta 0.73 RECOMMENDED.</t></section>
+  </middle>
+  <back>
+    <references><name>Normative References</name><reference anchor="RFC2119" target="https://www.rfc-editor.org/info/rfc2119"><front><title>Key words for use in RFCs to Indicate Requirement Levels</title><author fullname="S. Bradner" initials="S." surname="Bradner"/><date year="1997" month="March"/></front></reference><reference anchor="RFC8174" target="https://www.rfc-editor.org/info/rfc8174"><front><title>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</title><author fullname="B. Leiba" initials="B." surname="Leiba"/><date year="2017" month="May"/></front></reference></references>
+    <section anchor="ack"><name>Acknowledgments</name><t>Contributors Canon Final v1.1</t></section>
+  </back>
+</rfc>

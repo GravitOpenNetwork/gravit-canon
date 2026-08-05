@@ -1,0 +1,168 @@
+
+
+
+
+Individual Submission                                        A. Konviser
+Internet-Draft                                       Gravit Open Network
+Intended status: Informational                             5 August 2026
+Expires: 6 February 2027
+
+
+             Gravit Epistemic Verification Protocol (GEVP)
+                          draft-gravit-gevp-06
+
+Abstract
+
+   GEVP defines minimal protocol for epistemic convergence.  Renamed
+   from VCP to avoid collision with draft-kamimura-scitt-vcp.  Invariant
+   C_manip > C_val*2.0 as engineering heuristic.  Theta 0.73 RECOMMENDED
+   pinned 7755f53.  Architecture stable per
+   https://github.com/GravitOpenNetwork/gravit-canon.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 6 February 2027.
+
+Copyright Notice
+
+   Copyright (c) 2026 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+
+
+
+Konviser                 Expires 6 February 2027                [Page 1]
+
+Internet-Draft                    GEVP                       August 2026
+
+
+Table of Contents
+
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Conventions . . . . . . . . . . . . . . . . . . . . . . . . .   2
+   3.  Epistemic State Machine . . . . . . . . . . . . . . . . . . .   2
+   4.  Protocol Data Types . . . . . . . . . . . . . . . . . . . . .   2
+   5.  Persistence . . . . . . . . . . . . . . . . . . . . . . . . .   2
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   3
+   7.  Privacy Considerations  . . . . . . . . . . . . . . . . . . .   3
+   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
+   9.  Implementation Status . . . . . . . . . . . . . . . . . . . .   3
+   10. Normative References  . . . . . . . . . . . . . . . . . . . .   3
+   Appendix A.  Acknowledgments  . . . . . . . . . . . . . . . . . .   3
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   3
+
+1.  Introduction
+
+   Gravit open network for verifiable knowledge transformations.
+   Stable.  Future is implementations.
+
+   GEVP defines ESM RAW->VALIDATED->VERIFIED->COMMITTED, verification
+   types, persistence MAY Ledger IPFS GSS DB Archive, bindings separate.
+
+2.  Conventions
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in BCP
+   14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
+
+   Invariant C_manip > C_val*2.0 measurement.
+
+3.  Epistemic State Machine
+
+   States RAW VALIDATED VERIFIED COMMITTED explicit logged.
+
+4.  Protocol Data Types
+
+   Artifact id hash SHA3-256 claim provenance signatures optional.
+   Record artifact-id verifier-id theta 0.73 result timestamp.
+   Convergence h>0.7 f<0.3.
+
+5.  Persistence
+
+   MAY not MUST.  Ledger IPFS GSS DB Archive.
+
+
+
+
+
+Konviser                 Expires 6 February 2027                [Page 2]
+
+Internet-Draft                    GEVP                       August 2026
+
+
+6.  Security Considerations
+
+   Replay hash nonce.  Sybil cost model.  No PII.  Signatures OPTIONAL.
+
+7.  Privacy Considerations
+
+   Content MAY encrypted, provenance MAY redacted.
+
+8.  IANA Considerations
+
+   No IANA actions.
+
+9.  Implementation Status
+
+   MVR 0.1.0-mvr https://github.com/GravitOpenNetwork/gravit-canon SHA
+   7755f53 TPR 93.4 FPR 0.4 theta 0.73 RECOMMENDED.
+
+10.  Normative References
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", March 1997,
+              <https://www.rfc-editor.org/info/rfc2119>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", May 2017,
+              <https://www.rfc-editor.org/info/rfc8174>.
+
+Appendix A.  Acknowledgments
+
+   Contributors Canon Final v1.1
+
+Author's Address
+
+   Alex Konviser
+   Gravit Open Network
+   Email: ietf@gravit.space
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Konviser                 Expires 6 February 2027                [Page 3]

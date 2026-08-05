@@ -5,12 +5,16 @@
 **Gravit** is an open network for verifiable knowledge transformations.
 
 ### IETF — POSTED ✅
-**Latest:** `draft-gravit-gevp-05` — 2026-08-05 — POSTED
+**Latest:** 
+- GEVP 06 POSTED: https://www.ietf.org/archive/id/draft-gravit-gevp-06.txt (adds MUSTs, defines h/f, Canon alignment RFC-0002/0003)
+- Datatracker: https://datatracker.ietf.org/doc/draft-gravit-gevp/
+`
+- draft-gravit-gevp-05` — 2026-08-05 — POSTED
 - TXT: https://www.ietf.org/archive/id/draft-gravit-gevp-05.txt
 - HTML: https://www.ietf.org/archive/id/draft-gravit-gevp-05.html
 - Datatracker: https://datatracker.ietf.org/doc/draft-gravit-gevp/
 - Status: Submission status: Posted / 1 author / 5.1 KB / 3 pages
-
+-     ## IETF
 GEVP renamed from VCP to avoid collision with VeritasChain VCP (draft-kamimura-scitt-vcp).
 
 **Core Invariant (engineering heuristic, NOT theorem):**

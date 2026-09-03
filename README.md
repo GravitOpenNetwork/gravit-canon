@@ -1,4 +1,5 @@
 Gravit Canon — Final v1.1 / GEVP + VEDS
+<img width="1920" height="1280" alt="grafik" src="https://github.com/user-attachments/assets/b2da6ae8-488c-4778-8922-8b959c524c3a" />
 
     Architecture is STABLE. Two-track IETF architecture POSTED. Future work is implementations, interoperability, and operational experience.
 

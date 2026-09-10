@@ -1,8 +1,8 @@
 # EXP-HP-001 — Semantic Space Simulation
 
-**Status:** Scaffold + minimal executable prototype  
+**Status:** Executable prototype v2 (graded Compatible Level-0/1/2)  
 **Normative force:** None  
-**Parent documents:** HP-0001, HP-0002 v0.2, HP-0003  
+**Parent documents:** HP-0001, HP-0002 v0.2, HP-0003, HP-0004  
 **Date:** 2026-09-10  
 
 ---
@@ -54,30 +54,13 @@ The native representation itself is **not** placed in the commitment; only the e
 
 ---
 
-## Execution Flow (toy)
+## Graded Compatible (HP-0004)
 
-```
-Task
-  |
-  |─► Agent A (symbolic)  ──ext_A──► K_A
-  |─► Agent B (vector)    ──ext_B──► K_B
-  |└► Agent C (colour)    ──ext_C──► K_C
-                |
-                ▼
-         Compatibility check
-         (same claim value + optional confidence band)
-                |
-                ▼
-         Trust state T  (simple aggregate)
-                |
-                ▼
-         Human Authority gate
-                |
-        ┌───────┬───────┐
-        |               |
-     ALLOW            DENY
-   (only if H=True)
-```
+- Level 0 (weak): claim identity only
+- Level 1: claim identity + confidence band
+- Level 2: Level-1 + evidence presence
+
+Strong (evidence-support) compatibility remains CONJECTURED.
 
 ---
 
@@ -87,21 +70,10 @@ Task
 def human_authority_gate(T, H):
     if not H:
         return "DENY"
-    # additional policy checks may be added
     return "ALLOW" if T["compatible"] else "DENY"
 ```
 
 If the human-authority flag is absent or false, execution is refused regardless of validator agreement.
-
----
-
-## Files in this directory
-
-| File | Role |
-|------|------|
-| `README.md` | this document |
-| `toy_model.py` | minimal executable prototype |
-| `run_example.sh` | convenience runner |
 
 ---
 
@@ -112,29 +84,20 @@ cd research/experiments/semantic-space-simulation
 python3 toy_model.py
 ```
 
-Expected behaviour:
-
-- three commitments are printed (native forms remain opaque to the human reader);
-- compatibility is reported;
-- when `HUMAN_AUTHORITY = False` the gate returns DENY;
-- when `HUMAN_AUTHORITY = True` and claims agree, the gate returns ALLOW.
-
----
-
-## Success criteria (research)
-
-1. Native representations stay non-interpretable to a human reader of the commitment objects.
-2. Compatibility can still be decided from the commitment layer.
-3. Fail-closed behaviour is observable by toggling the human-authority flag.
+Demonstrates:
+- Level-1 ALLOW under authority
+- Level-1 DENY when authority absent (fail-closed)
+- Level-1 DENY under wide confidence spread
+- Level-2 ALLOW with heterogeneous evidence kinds
 
 ---
 
 ## Non-claims
 
 - This is not a simulation of real multi-agent AI systems.
-- Colour space is a deliberate toy stand-in, not a claim about perceptual AI.
+- Colour space is a deliberate toy stand-in.
 - No performance, security or scalability claims are made.
 
 ---
 
-**Status:** Scaffold + first executable prototype.  
+**Status:** Executable prototype v2.  

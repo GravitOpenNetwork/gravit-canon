@@ -34,7 +34,7 @@ but MUST NOT be cited as if it conferred normative force on the RFCs.
 | File | Title | Status |
 |------|-------|--------|
 | `human-priority/HP-0001-Human-Priority-over-Non-Human-Semantic-Spaces.md` | Formal foundations of Human Priority | Research Draft v0.1 (Experimental) |
-| `human-priority/HP-0002-Semantic-Boundary-Model.md` | Semantic Boundary interface | Research Draft v0.1 |
+| `human-priority/HP-0002-Semantic-Boundary-Model.md` | Semantic Boundary (formal maps \(\operatorname{ext},\operatorname{ver},\operatorname{auth}\)) | Research Draft v0.2 |
 | `human-priority/HP-0003-Human-Authority-Invariant.md` | Fail-closed Human Authority Invariant | Research Draft v0.1 |
 
 ### Mathematics (supporting notes)
@@ -42,15 +42,16 @@ but MUST NOT be cited as if it conferred normative force on the RFCs.
 | File | Title | Status |
 |------|-------|--------|
 | `mathematics/semantic-space.md` | Working definitions for \(S_i\) | Research notes |
+| `mathematics/semantic-boundary.md` | Formal signature of \(\partial_i\) | Research notes |
 | `mathematics/epistemic-commitment.md` | Structure of \(K_i(c)\) | Research notes |
 | `mathematics/graviteron-model.md` | Multi-component reliability representation | Research hypothesis |
 
-### Experiments (scaffolds)
+### Experiments
 
 | Directory | Intent | Status |
 |-----------|--------|--------|
-| `experiments/semantic-space-simulation/` | Heterogeneous artificial semantic spaces under common epistemic commitment | Design only |
-| `experiments/adversarial-opacity/` | Opacity of representation vs opacity of accountability | Design only |
+| `experiments/semantic-space-simulation/` | Three artificial semantic spaces + common commitment + fail-closed gate | Scaffold + executable toy prototype |
+| `experiments/adversarial-opacity/` | Formal attack design (A1–A4) on accountability under opacity | Formal design |
 | `experiments/validator-divergence/` | (reserved) | — |
 
 ## Rules

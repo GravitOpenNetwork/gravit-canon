@@ -36,8 +36,8 @@ but MUST NOT be cited as if it conferred normative force on the RFCs.
 | `human-priority/HP-0001-Human-Priority-over-Non-Human-Semantic-Spaces.md` | Formal foundations of Human Priority | Research Draft v0.1 (Experimental) |
 | `human-priority/HP-0002-Semantic-Boundary-Model.md` | Semantic Boundary (formal maps \(\operatorname{ext},\operatorname{ver},\operatorname{auth}\)) | Research Draft v0.2 |
 | `human-priority/HP-0003-Human-Authority-Invariant.md` | Fail-closed Human Authority Invariant | Research Draft v0.1 |
-| `human-priority/HP-0004-Compatible-Relation.md` | Graded Compatible under heterogeneous spaces | Research Draft v0.1 |
-| `human-priority/HP-0005-Mapping-to-Epistemic-State-Machine.md` | Mapping HP guards onto EES state machine | Research Draft v0.1 |
+| `human-priority/HP-0004-Compatible-Relation.md` | Graded Compatible (Levels 0–3 DEFINED, Level-4 CONJECTURED) | Research Draft v0.2 |
+| `human-priority/HP-0005-Mapping-to-Epistemic-State-Machine.md` | Mapping HP guards onto EES; primary hypothesis H1 (before CERTIFIED/COMMITTED) | Research Draft v0.2 |
 
 ### Mathematics (supporting notes)
 
@@ -53,7 +53,7 @@ but MUST NOT be cited as if it conferred normative force on the RFCs.
 | Directory | Intent | Status |
 |-----------|--------|--------|
 | `experiments/semantic-space-simulation/` | Three artificial semantic spaces + graded Compatible + fail-closed gate | Executable prototype v2 |
-| `experiments/adversarial-opacity/` | Formal attack design (A1–A4) + adversary stubs | Design + stubs |
+| `experiments/adversarial-opacity/` | A1/A2 × graded Compatible harness + stubs | Executable harness |
 | `experiments/validator-divergence/` | (reserved) | — |
 
 ## Rules
